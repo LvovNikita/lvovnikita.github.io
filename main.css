@@ -1,0 +1,12 @@
+:root {
+    --padding2: 2rem;
+}
+
+.container {
+    padding-top: var(--padding2);
+    padding-bottom: var(--padding2);
+}
+.card {
+    border: 0;
+    padding: 5rem var(--padding2);
+}
