@@ -1,0 +1,17 @@
+[33mcommit f92e332015895f2230027d6a571286dcc9280fa1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mlvovnikita.github.io/master[m[33m)[m
+Author: LvovNikita <LvovNikita@users.noreply.github.com>
+Date:   Sat May 14 12:09:07 2022 +0300
+
+    Create CNAME
+
+[33mcommit 0f7ebd025ac8e64af50a646648371302ad5faffb[m
+Author: Lvov Nikita <lvov.nikita@yahoo.com>
+Date:   Sat May 14 12:04:18 2022 +0300
+
+    Basic template: navigation, header, accordion. main.css has been created. Bootstrap has been included via CDN
+
+[33mcommit 63d7830619b551b1c9f4ab201d62c1a432cf5892[m
+Author: Lvov Nikita <lvov.nikita@yahoo.com>
+Date:   Fri May 13 23:21:54 2022 +0300
+
+    index.html has been created
