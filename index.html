@@ -55,6 +55,7 @@
         <!-- LEARNIUM COURSES -->
         <main class="container">
             <h1 style="text-align: center">LEARNIUM</h1>
+            <!-- Основы HTML и CSS -->
             <div class="accordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -89,6 +90,29 @@
                     </div>
                 </div>
             </div>
+            <!-- Разбор решения простых задач по программированию (Python) -->
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button 
+                            class="accordion-button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#course2">
+                            Разбор простых задач по программированию (Python)
+                        </button>
+                    </h2>
+                    <div id="course2" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Задачи на ввод-вывод данных <a href="https://www.youtube.com/watch?v=mKkAsbpltBY&list=PL2BZizgPzZlwEfBz4Wj_B2bx8cNKOKjj4&index=1">[link]</a></li>
+                                <li class="list-group-item">Задачи на условные операторы <a href="https://www.youtube.com/watch?v=FMKjBhwZuDk&list=PL2BZizgPzZlwEfBz4Wj_B2bx8cNKOKjj4&index=2">[link]</a></li>
+                                <li class="list-group-item">Задачи на циклы <a href="https://www.youtube.com/watch?v=iWfyiKpu0Lo&list=PL2BZizgPzZlwEfBz4Wj_B2bx8cNKOKjj4&index=3">[link]</a></li>
+                                <li class="list-group-item">Задачи на массивы <a href="https://www.youtube.com/watch?v=iRKped36hPU&list=PL2BZizgPzZlwEfBz4Wj_B2bx8cNKOKjj4&index=4">[link]</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- TEMPLATE -->
             <!-- <div class="accordion">
                 <div class="accordion-item">
@@ -102,8 +126,8 @@
                     </h2>
                     <div id="course{{id}}" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <ul>
-                                <li>{{Title}} <a href="{{#}}">[link]</a></li>
+                            <ul class="list-group">
+                                <li class="list-group-item">{{Title}} <a href="{{#}}">[link]</a></li>
                             </ul>
                         </div>
                     </div>
