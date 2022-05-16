@@ -1,0 +1,6 @@
+@media (max-width: 767px) {
+    main,
+    .social {
+        margin: var(--margin3) 0;
+    } 
+}

@@ -1,6 +1,7 @@
 :root {
     --padding1: 1rem;
     --padding2: 2rem;
+    --margin3: 3rem;
 }
 .container {
     padding-top: var(--padding2);
