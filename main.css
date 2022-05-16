@@ -21,3 +21,9 @@
 .accordion-button {
     background-color: white !important;
 }
+.coming-soon {
+    padding: var(--padding2) 0;
+}
+.text-bg-dark {
+    background-color: #212529;
+}
