@@ -1,7 +1,7 @@
 :root {
+    --padding1: 1rem;
     --padding2: 2rem;
 }
-
 .container {
     padding-top: var(--padding2);
     padding-bottom: var(--padding2);
@@ -9,4 +9,12 @@
 .card {
     border: 0;
     padding: 5rem var(--padding2);
+    text-align: center;
+}
+.social div {
+    text-align: center;
+}
+.social-logo {
+    margin-bottom: var(--padding1);
+    width: 30px
 }
