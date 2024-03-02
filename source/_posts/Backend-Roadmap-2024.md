@@ -51,13 +51,16 @@ tags: data_structures, algorithms
 * GitLens Tips | 11 Tips for Using GitLens in VS Code
 * GitLens Tutorial: How to Use GitLens in VS Code
 * TOP 6 GIT Extensions You Need In VS Code
-* Using Git with Visual Studio Code (Official Beginner Tutorial)
+* [X] Using Git with Visual Studio Code (Official Beginner Tutorial)
 
 ## GraphQL
 
+* GraphQL Course for Beginners
+* GraphQL Tutorial Beginner - Learn GraphQL in NodeJS / ExpressJS
+* Modern GraphQL Crash Course - 2022
+
 ## NodeRED
 
-* How to use MQTT in Node-Red: basics, examples, tip & tricks
 * Node-Red Tutorial – Common Nodes Explained!
 
 ## NPM, Verdaccio
@@ -78,12 +81,13 @@ tags: data_structures, algorithms
 * Learn Database Administration – PostgreSQL Database Administration (DBA) for Beginners
 * PostgreSQL: практические примеры оптимизации SQL-запросов / Иван Фролков (Postgres Professional)
 * Procedure Tutorial in SQL | SQL Stored Procedure | Procedure in SQL
+* [X] Ranges in Postgres
 * SQL For Web Developers – Complete Database Course
-* Using JSON in PostgreSQL
-* Working With PostgreSQL As A JSON Document Store – Robert Bernier – Percona Live Online 2020
-* We All Deserve Arrays: The Undervalued PostgreSQL Superpower
+* [X] Using JSON in PostgreSQL
+* [X] Working With PostgreSQL As A JSON Document Store – Robert Bernier – Percona Live Online 2020
+* [X] We All Deserve Arrays: The Undervalued PostgreSQL Superpower
 * Блокировки в PostgreSQL / Егор Рогов (Postgres Professional)
-* Панченко Иван, Postgres Pro — Использование JSON в PostgreSQL
+* [X] Панченко Иван, Postgres Pro — Использование JSON в PostgreSQL
 
 ## RxJS
 
@@ -92,11 +96,14 @@ tags: data_structures, algorithms
 * Demystifying RxJS Operators – Jan-Niklas Wortmann | Angular Birmingham
 * Don’t Lose Your Marbles, We Can Test RxJS Code – RxJS Live! London – by Jay Phelps
 * How To Build Your Own RxJS Operators | Ben Lesh & Tracy Lee
-* How to Read RxJS Marble Diagrams
-* MoscowJS 42 – RxJS по косточкам – Андрей Алексеев
+* [X] How to Read RxJS Marble Diagrams
+* [X] MoscowJS 42 – RxJS по косточкам – Андрей Алексеев
 * RxJS 5 Thinking Reactively | Ben Lesh
-* RxJS – Юрий Стромов
+* [X] RxJS – Юрий Стромов
 * What GroupsBy in Vegas, Stays in Vegas – Mike Ryan & Sam Julien
-* Глеб Михеев — Как RxJS разделил мой мир на до и после
+* [X] Глеб Михеев — Как RxJS разделил мой мир на до и после
 
 ## WebSocket
+
+* A Beginner's Guide to WebSockets
+* WebSockets Crash Course - Handshake, Use-cases, Pros & Cons and more
