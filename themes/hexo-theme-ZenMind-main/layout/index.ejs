@@ -2,10 +2,6 @@
     <% page.posts.each(function (post) { %>
     <div class="post">
         <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
-        <div class="post-except">
-          <%- post.title %>
-          <a class="read-more" href="<%- url_for(post.path) %>"> ... </a>
-        </div>
         <div class="post-date"><%- date(post.date, "YYYY.MM.DD") %></div>
     </div>
     <% }) %>

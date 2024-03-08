@@ -1,8 +1,14 @@
 ---
 title: Backend Roadmap 2024
 date: 2024-02-25 11:45:07
-tags: data_structures, algorithms
+tags: resources
 ---
+
+## Bash
+
+* [Bash Builtins](https://linuxcommand.org/lc3_man_page_index.php)
+* [Bash Guide for Beginners](https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
+* [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
 
 ## Data Structures and Algorithms
 
@@ -22,27 +28,16 @@ tags: data_structures, algorithms
 
 ## Design Patterns
 
-## Protocols
-
-* Computer Networking Course – Network Engineering [CompTIA Network+ Exam Prep]
-* Full HTTP Networking Course – Fetch and REST APIs in JavaScript
-
-## Security
-
-* OWASP API Security Top 10 Course – Secure Your Web Apps
-
-## System Design
-
-* API Documentation Best Practices – Full Course
-* 20 System Design Concepts Explained in 10 Minutes
-* Comparing web API types: SOAP, REST, GraphQL and RPC
-* System Design Course for Beginners
-* System Design for Beginners Course
-* UML Diagrams Full Course (Unified Modeling Language)
-
-## Testing
-
-* Postman Beginner's Course - API Testing
+* [Design Patterns for Humans](https://github.com/kamranahmedse/design-patterns-for-humans)
+* [DigitalOcean](https://www.digitalocean.com/community/tutorials/gangs-of-four-gof-design-patterns)
+* [Gang of Four Design Patterns](https://springframework.guru/gang-of-four-design-patterns/)
+* [Geeks for Geeks](https://www.geeksforgeeks.org/software-design-patterns/)
+* [Object Oriented Design](https://www.oodesign.com/)
+* [Refactoring Guru Design Patterns](https://refactoring.guru/design-patterns)
+* [SourceMaking Antipatterns](https://sourcemaking.com/antipatterns)
+* [SourceMaking Design Patterns](https://sourcemaking.com/design_patterns)
+* [SourceMaking Refactoring](https://sourcemaking.com/refactoring)
+* JavaScript Паттерны. Полный курс (22 паттерна в 1 видео)
 
 ## ClickHouse
 
@@ -59,6 +54,11 @@ tags: data_structures, algorithms
 * GraphQL Tutorial Beginner - Learn GraphQL in NodeJS / ExpressJS
 * Modern GraphQL Crash Course - 2022
 
+## Mermaid
+
+* [Class diagrams](https://mermaid.js.org/syntax/classDiagram.html)
+* [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
+
 ## NodeRED
 
 * Node-Red Tutorial – Common Nodes Explained!
@@ -67,6 +67,30 @@ tags: data_structures, algorithms
 
 * How To Create And Publish Your First NPM Package
 * Create a NPM Package and publish it locally with Verdaccio
+
+## Postman
+
+* Postman Beginner's Course - API Testing
+* [Postman Answers](https://www.postman.com/postman/workspace/postman-answers/overview)
+
+## Protocols
+
+* Computer Networking Course – Network Engineering [CompTIA Network+ Exam Prep]
+* Full HTTP Networking Course – Fetch and REST APIs in JavaScript
+
+## Security
+
+* OWASP API Security Top 10 Course – Secure Your Web Apps
+
+## System Design
+
+* API Documentation Best Practices – Full Course
+* 20 System Design Concepts Explained in 10 Minutes
+* Comparing web API types: SOAP, REST, GraphQL and RPC
+* [SourceMaking UML](https://sourcemaking.com/uml)
+* System Design Course for Beginners
+* System Design for Beginners Course
+* UML Diagrams Full Course (Unified Modeling Language)
 
 ## RabbitMQ
 
