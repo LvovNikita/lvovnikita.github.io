@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>MikroORM multirange (PostgreSQL) Custom Type - sa3n.ru</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051import &#123; Type &#125; from &#x27;@mikro-orm&#x2F;core&#x27;;import dayjs from &#x27;dayjs&#x27;;&#x2F;** * Тип Po">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MikroORM multirange (PostgreSQL) Custom Type">
+<meta property="og:url" content="http://www.sa3n.ru/2024/03/18/MikroORM-multirange-PostgreSQL-Custom-Type/">
+<meta property="og:site_name" content="sa3n.ru">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051import &#123; Type &#125; from &#x27;@mikro-orm&#x2F;core&#x27;;import dayjs from &#x27;dayjs&#x27;;&#x2F;** * Тип Po">
+<meta property="og:locale" content="ru_RU">
+<meta property="article:published_time" content="2024-03-18T05:47:37.000Z">
+<meta property="article:modified_time" content="2024-03-18T05:47:58.426Z">
+<meta property="article:author" content="Nikita Lvov">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="http://www.sa3n.ru/2024/03/18/MikroORM-multirange-PostgreSQL-Custom-Type/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">sa3n.ru</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            MikroORM multirange (PostgreSQL) Custom Type
+        </div>
+        <div class="post-meta">
+            2024-03-18 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Type &#125; from &#x27;@mikro-orm/core&#x27;;</span><br><span class="line">import dayjs from &#x27;dayjs&#x27;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Тип PostgreSQL 14+ tsmultirange</span><br><span class="line"> * @example tsmultirange.convertToJSValue(&#x27;&#123;[&quot;2024-01-01 00:00:00&quot;,&quot;2024-01-01 18:00:00&quot;),[&quot;2024-01-01 19:00:00&quot;,&quot;2024-01-01 23:00:00&quot;)&#125;&#x27;);</span><br><span class="line"> * @example tsmultirange.convertToDatabaseValue([[1704056400000, 1704121200000], [1704124800000, 1704139200000]]);</span><br><span class="line"> */</span><br><span class="line">export class TsMultirange extends Type&lt;[number, number][], string&gt; &#123;</span><br><span class="line">  /**</span><br><span class="line">   * Конвертировать значение в соответствующее представление tsmultirange в PostgreSQL</span><br><span class="line">   * @param jsRanges Диапазоны в формате [timestampFrom, timestampTo][]</span><br><span class="line">   * @returns Строчное представление данных в PostgreSQL</span><br><span class="line">   */</span><br><span class="line">  convertToDatabaseValue(jsRanges: [number, number][]): string &#123;</span><br><span class="line">    const ranges: string[] = [];</span><br><span class="line">    const dateFormat = &#x27;YYYY-MM-DD HH:mm&#x27;;</span><br><span class="line">    for (const [from, to] of jsRanges) &#123;</span><br><span class="line">      ranges.push(`[$&#123;dayjs(from).format(dateFormat)&#125;, $&#123;dayjs(to).format(dateFormat)&#125;)`);</span><br><span class="line">    &#125;;</span><br><span class="line">    const result = `&#123;$&#123;ranges.join(&#x27;,&#x27;)&#125;&#125;`;</span><br><span class="line">    return result;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * Конвертировать значение, представленное в виде строки в PostgreSQL в соответствующий объект</span><br><span class="line">   * @param dbValue Диапазон в формате tsmultirange в PostgreSQL</span><br><span class="line">   * @returns Диапазоны в формате [timestampFrom, timestampTo][]</span><br><span class="line">   */</span><br><span class="line">  convertToJSValue(dbValue: string): [number, number][] &#123;</span><br><span class="line">    const rangesRegExp = /\[(.*?[^\\])\)/g;</span><br><span class="line">    const matches: IterableIterator&lt;RegExpMatchArray&gt; = dbValue.matchAll(rangesRegExp);</span><br><span class="line">    const result = [];</span><br><span class="line">    for (const match of matches) &#123;</span><br><span class="line">      const jsRange = match[1]</span><br><span class="line">        .replace(/&quot;/g, &#x27;&#x27;)</span><br><span class="line">        .split(&#x27;,&#x27;)</span><br><span class="line">        .map((datetime: string) =&gt; dayjs(datetime).valueOf());</span><br><span class="line">      result.push(jsRange);</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  /**</span><br><span class="line">   * Тип столбца в PostgreSQL</span><br><span class="line">   * @returns Тип столбца</span><br><span class="line">   */</span><br><span class="line">  getColumnType(): string &#123;</span><br><span class="line">    return &#x27;tsmultirange&#x27;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+
+                <div class="footer">
+    <span>Copyright © 2023 sa3n.ru</span>
+    <span>Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> with <a target="_blank" rel="noopener" href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>
