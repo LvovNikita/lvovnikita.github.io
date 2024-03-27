@@ -7,8 +7,11 @@ tags: resources
 ## Bash
 
 * [Bash Builtins](https://linuxcommand.org/lc3_man_page_index.php)
+* [Bash Exercises](https://exercism.org/tracks/bash/exercises)
+* [Bash Guide](https://mywiki.wooledge.org/BashGuide)
 * [Bash Guide for Beginners](https://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
+* [OverTheWire](https://overthewire.org/wargames/bandit/bandit0.html)
 
 ## Data Structures and Algorithms
 
@@ -56,17 +59,17 @@ tags: resources
 
 ## Mermaid
 
-* [Class diagrams](https://mermaid.js.org/syntax/classDiagram.html)
-* [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
+* [X] [Class diagrams](https://mermaid.js.org/syntax/classDiagram.html)
+* [X] [Entity Relationship Diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
 
 ## NodeRED
 
-* Node-Red Tutorial – Common Nodes Explained!
+* [X] Node-Red Tutorial – Common Nodes Explained!
 
 ## NPM, Verdaccio
 
-* How To Create And Publish Your First NPM Package
-* Create a NPM Package and publish it locally with Verdaccio
+* [X] How To Create And Publish Your First NPM Package
+* [X] Create a NPM Package and publish it locally with Verdaccio
 
 ## Postman
 

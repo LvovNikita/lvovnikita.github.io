@@ -69,6 +69,7 @@ tags: resources
 * [NodeBB](https://nodebb.org/)
 * [Notifo](https://github.com/notifo-io/notifo)
 * [novu](https://novu.co/)
+* [odoo](https://www.odoo.com/)
 * [OliveTin](https://github.com/OliveTin/OliveTin)
 * [ONLYOFFICE](https://helpcenter.onlyoffice.com/)
 * [OpenProject](https://www.openproject.org/)
@@ -97,3 +98,5 @@ tags: resources
 * [Swing Music](https://swingmusic.vercel.app/)
 * [ToolJet](https://www.tooljet.com/)
 * [Wastebin](https://github.com/matze/wastebin?tab=readme-ov-file)
+* [wiki.js](https://js.wiki/)
+* [yaade](https://github.com/EsperoTech/yaade)
