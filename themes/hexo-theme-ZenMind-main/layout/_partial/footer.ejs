@@ -8,3 +8,9 @@
     hljs.initHighlightingOnLoad();
     hljs.initLineNumbersOnLoad();
 </script>
+<% if (config.mermaid && config.mermaid.enable) { %>
+<script src="https://unpkg.com/mermaid@<%= config.mermaid.version %>/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize(<%- JSON.stringify(config.mermaid.options || {}) %>);
+</script>
+<% } %>
