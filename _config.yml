@@ -98,6 +98,13 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-ZenMind-main
 
+# Mermaid diagrams
+mermaid:
+  enable: true
+  version: "9.4.3"
+  options:
+    theme: default
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

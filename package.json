@@ -5,14 +5,23 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "deploy": "hexo clean && hexo generate && hexo deploy",
+    "server": "hexo server",
+    "dev": "hexo clean && hexo server",
+    "new:post": "hexo new post",
+    "new:page": "hexo new page",
+    "new:draft": "hexo new draft",
+    "publish:draft": "hexo publish"
   },
   "hexo": {
     "version": "7.0.0"
   },
+  "devDependencies": {
+    "hexo-browsersync": "^0.0.1"
+  },
   "dependencies": {
     "hexo": "^7.0.0",
+    "hexo-filter-mermaid-diagrams": "^1.0.5",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
